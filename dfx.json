@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "WebOnIcp": {
+      "main": "src/WebOnIcp/main.mo",
+      "type": "motoko"
+    },
+    "WebOnIcp_assets": {
+      "dependencies": [
+        "WebOnIcp"
+      ],
+      "frontend": {
+        "entrypoint": "src/WebOnIcp_assets/src/index.html"
+      },
+      "source": [
+        "src/WebOnIcp_assets/assets",
+        "dist/WebOnIcp_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.8.4",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
